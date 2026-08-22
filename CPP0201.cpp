@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		int n,i;
+		int a[100000];
+		cin>>n;
+		for(i=0;i<n;i++){
+			cin>>a[i];
+		}
+		int j,min=1000000000;
+		sort(a,a+n);
+		for(i=0;i<n-1;i++){
+			if (a[i+1]-a[i]<min) min=a[i+1]-a[i];
+		}
+		cout<<min<<endl;
+		
+	}
+	return 0;
+}
